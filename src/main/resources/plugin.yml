@@ -1,0 +1,8 @@
+name: BlockVillagerTrade
+version: ${project.version}
+main: me.memestealer.com.blockvillagertrade.BlockVillagerTrade
+api-version: 1.17
+description: Simple Solution On Blocking Villager Trade.
+commands:
+  bvtreload:
+    description: Reload the configuration.
