@@ -1,0 +1,43 @@
+####################################
+### CONFIG MADE BY : MEMESTEALER ###
+######### CONFIG VER : 1.4 #########
+####################################
+
+Enabled: true
+## Enable the villager trade blocker.
+
+Message-Enabled: true
+Message: "&cVillager trading is disabled."
+## Enable the message when player try to trade.
+
+Action-Bar: false
+Action-Bar-Message: "&cVillager trading is disabled."
+## Enable the message as an action bar.
+
+Title: true
+Title-Message: "&cVillager Trading"
+Title-Subtitle: "&chas been disabled."
+## Only works if Title is set to true
+
+Profession-Blocker:
+  Enabled: false
+  Profession:
+    Armorer: false
+    Butcher: false
+    Cartographer: false
+    Cleric: false
+    Farmer: false
+    Fisherman: false
+    Fletcher: false
+    Leatherworker: false
+    Librarian: false
+    Nitwit: false
+    Shepherd: false
+    Toolsmith: false
+    Weaponsmith: false
+    Mason: false
+## Disable trade on specific villager profession
+
+Other-Messages:
+  Reload: "&aSuccessfully reloaded the config."
+  No-Permission: "&cYou do not have permission to do this."
