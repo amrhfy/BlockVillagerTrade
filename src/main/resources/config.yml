@@ -14,7 +14,7 @@ Action-Bar: false
 Action-Bar-Message: "&cVillager trading is disabled."
 ## Enable the message as an action bar.
 
-Title: true
+Title: false
 Title-Message: "&cVillager Trading"
 Title-Subtitle: "&chas been disabled."
 ## Only works if Title is set to true

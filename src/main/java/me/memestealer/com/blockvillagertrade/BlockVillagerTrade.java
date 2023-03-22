@@ -42,74 +42,14 @@ public final class BlockVillagerTrade extends JavaPlugin {
         String prof = v.getProfession().toString();
         boolean bool = false;
 
-        if (prof.equalsIgnoreCase("Armorer")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Armorer"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Armorer");
-        }
+        String[] professions = {"Armorer", "Butcher", "Cartographer", "Cleric", "Farmer", "Fisherman", "Fletcher", "Leatherworker", "Librarian", "Nitwit", "Shepherd", "Toolsmith", "Weaponsmith", "Mason"};
 
-        if (prof.equalsIgnoreCase("Butcher")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Butcher"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Butcher");
-        }
-
-        if (prof.equalsIgnoreCase("Cartographer")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Cartographer"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Cartographer");
-        }
-
-        if (prof.equalsIgnoreCase("Cleric")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Cleric"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Cleric");
-        }
-
-        if (prof.equalsIgnoreCase("Farmer")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Farmer"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Farmer");
-        }
-
-        if (prof.equalsIgnoreCase("Fisherman")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Fisherman"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Fisherman");
-        }
-
-        if (prof.equalsIgnoreCase("Fletcher")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Fletcher"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Fletcher");
-        }
-
-        if (prof.equalsIgnoreCase("Leatherworker")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Leatherworker"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Leatherworker");
-        }
-
-        if (prof.equalsIgnoreCase("Librarian")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Librarian"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Librarian");
-        }
-
-        if (prof.equalsIgnoreCase("Nitwit")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Nitwit"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Nitwit");
-        }
-
-        if (prof.equalsIgnoreCase("Shepherd")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Shepherd"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Shepherd");
-        }
-
-        if (prof.equalsIgnoreCase("Toolsmith")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Toolsmith"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Toolsmith");
-        }
-
-        if (prof.equalsIgnoreCase("Weaponsmith")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Weaponsmith"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Weaponsmith");
-        }
-
-        if (prof.equalsIgnoreCase("Mason")) {
-            e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession.Mason"));
-            bool = getConfig().getBoolean("Profession-Blocker.Profession.Mason");
+        for (String profession : professions) {
+            if (prof.equalsIgnoreCase(profession)) {
+                e.setCancelled(getConfig().getBoolean("Profession-Blocker.Profession." + profession));
+                bool = getConfig().getBoolean("Profession-Blocker.Profession." + profession);
+                break;
+            }
         }
 
         if (bool) {
